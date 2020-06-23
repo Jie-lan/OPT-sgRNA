@@ -12,7 +12,7 @@ The CRISPR/Cas9 system is currently considered as the most advanced tool used fo
 
 ## A General View of OPT-sgRNA
 #### Main command
-<pre><code> Usage:
+<pre><code>Usage:
         OPT-sgRNA -I <input> -P [PAM] -G [ref seq] -S [ref species] -N [sgRNAs] -O [sgRNAs]
 
 Option:
@@ -21,12 +21,15 @@ Option:
         -S this is a reference genome applied in off-target sites searching
         -N best N sgRNAs with minimum off-target effect
         -O sgRNAs with maximum activity and minimum off-target effect
-Example:
+
+</pre></code>
+
+<pre><code>Example:
 OPT-sgRNA -I t.txt -P NGG -S Human -N 100 -O 10
+</pre></code>
 
-cat t.txt
+<pre><code>cat t.txt
 CD18A
-
 </pre></code>
 
 
