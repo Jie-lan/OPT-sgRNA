@@ -11,9 +11,9 @@ The CRISPR/Cas9 system is currently considered as the most advanced tool used fo
 
 
 ## A General View of OPT-sgRNA
-#### Command summary
+#### Main command
 <pre><code> Usage:
-        OPT-sgRNA -I <input> -P <PAM> -G <ref seq> -S <ref species> -N <sgRNAs> -O <sgRNAs>
+        OPT-sgRNA -I <input> -P [PAM] -G [ref seq] -S [ref species] -N [sgRNAs] -O [sgRNAs]
 
 Option:
         -I this is a input file
@@ -21,35 +21,14 @@ Option:
         -S this is a reference genome applied in off-target sites searching
         -N best N sgRNAs with minimum off-target effect
         -O sgRNAs with maximum activity and minimum off-target effect
+Example:
+OPT-sgRNA -I t.txt -P NGG -S Human -N 100 -O 10
+
+cat t.txt
+CD18A
 
 </pre></code>
 
-<pre><code> usage: OPT-sgRNA [-h] {off_target,search,score} ...
-
-optional arguments:
-  -h, --help            show this help message and exit
-
-subcommands:
-  valid subcommands
-
-  {off_target,search,score}
-                        config subscommand help
-    off_target          search off-target sites based reference
-                        genome/sequence
-    search              search sgRNA based on your fasta and PAM
-    score               fetch sgRNAs' score
-
-</pre></code>
-#### subcommand sgdesign score
-<pre><code> usage: OPT-sgRNA score [-h] [--path PATH] [--seq SEQ] [--pam PAM] [--out OUT]
-
-optional arguments:
-  -h, --help   show this help message and exit
-  --path PATH  reference genome/sequence path
-  --seq SEQ    sgRNA sequence
-  --pam PAM    PAM (NGG, NGRRG)
-  --out OUT    out file
-</pre></code>
 
 ## Prerequisites
 The following software and libraries are additionally required:
