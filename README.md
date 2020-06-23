@@ -11,7 +11,7 @@ The CRISPR/Cas9 system is currently considered as the most advanced tool used fo
 
 
 ## A General View of OPT-sgRNA
-#### Main command
+#### Command view
 <pre><code>Usage:
         OPT-sgRNA -I <input> -P [PAM] -G [ref seq] -S [ref species] -N [sgRNAs] -O [sgRNAs]
 
@@ -30,7 +30,8 @@ $ OPT-sgRNA -I t.txt -P NGG -S Human -N 100 -O 10
 </pre></code>
 
 #### input file
-<pre><code>$ cat t.txt
+<pre><code>
+$ cat t.txt
 CD18A
 
 $ cat t.fa
@@ -44,11 +45,13 @@ TACCCTTGTTAATAGAATCGAGTTAAAAGGTATTGATTTTAAAGAAGATGGAAACATTCTTGGACACAAA
 TTGGAATACAACTATAACTCACACAATGTATACATCATGGCAGACAAACAAAAGAATGGAATCAAAGTTA
 ACTTCAAAATTAGACACAACATTGAAGATGGAAGCGTTCAACTAGCAGACCATTATCAACAAAATACTCC
 AATTGGCGATGGCCCTGTCCTTTTACCAGACAACCATTACCTGTCCACACAATCTGCCCTTTCGAAAGAT
+
 </pre></code>
 
 
 ## Prerequisites
 The following software and libraries are additionally required:
+  
   Seqmap (1.0.12)  
   Python (>2.7)  
   RNAfold (2.4.3)  
