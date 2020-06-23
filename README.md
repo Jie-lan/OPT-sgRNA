@@ -26,14 +26,14 @@ Option:
 
 #### Example:
 <pre><code>
-OPT-sgRNA -I t.txt -P NGG -S Human -N 100 -O 10
+$ OPT-sgRNA -I t.txt -P NGG -S Human -N 100 -O 10
 </pre></code>
 
 #### input file
-<pre><code>cat t.txt
+<pre><code>$ cat t.txt
 CD18A
 
-cat t.fa
+$ cat t.fa
 >t
 ATGAGTAAAGGAGAAGAACTTTTCACTGGAGTTGTCCCAATTCTTGTTGAATTAGATGGTGATGTTAATG
 GGCACAAATTTTCTGTCAGTGGAGAGGGTGAAGGTGATGCAACATACGGAAAACTTACCCTTAAATTTAT
