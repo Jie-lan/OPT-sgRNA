@@ -13,7 +13,7 @@ The CRISPR/Cas9 system is currently considered as the most advanced tool used fo
 ## A General View of OPT-sgRNA
 #### Command view
 <pre><code>Usage:
-        OPT-sgRNA -I <input> -P [PAM] -G [ref seq] -S [ref species] -N [sgRNAs] -O [sgRNAs]
+        OPT-sgRNA -I [input] -P [PAM] -G [ref seq] -S [ref species] -N [sgRNAs] -O [sgRNAs]
 
 Option:
         -I this is a input file
@@ -25,11 +25,11 @@ Option:
 </pre></code>
 
 #### Example:
-<pre><code>$ OPT-sgRNA -I t.txt -P NGG -S Human -N 100 -O 10
+<pre><code>$ OPT-sgRNA -I input.txt -P NGG -S Human -N 100 -O 10
 </pre></code>
 
 #### input file
-<pre><code>$ cat t.txt
+<pre><code>$ cat input.txt
 CD18A
 
 $ cat t.fa
