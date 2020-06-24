@@ -24,6 +24,10 @@ Option:
 
 </pre></code>
 
+#### Prepare
+Pre-constructed sgRNAs libraries for Human and Mouse should downloaded from OPT-sgRNA website (http://bigdata.ibp.ac.cn/OPT-sgRNA/download) first.
+
+
 #### Example:
 <pre><code>$ sh OPT-sgRNA.sh -I input.txt -P NGG -S Human -N 100 -O 10
 </pre></code>
