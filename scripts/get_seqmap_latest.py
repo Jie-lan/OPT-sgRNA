@@ -1,6 +1,6 @@
 
 import sys
-sys.path.append("./scripts")
+sys.path.append("/home/lanjie/sgRNA/app/scripts")
 from collections import Counter
 from trans_off2feature import off_score
 import random
@@ -78,8 +78,8 @@ d2={}
 for d in di[:int(args.N)]:	
 	k=d[0].split(':')
 	#print(k)
-	score=os.popen('python sgdesign.py score --seq '+k[len(k)-1][:20]+':'+k[len(k)-3]+':'+k[len(k)-2]).read()
-	#print(score)
+	score=os.popen('python ./scripts/sgdesign.py score --seq '+k[len(k)-1][:20]+':'+k[len(k)-3]+':'+k[len(k)-2]).read()
+	print(score)
 	score=score.strip()
 	score=score.split(':')
 	d2[d[0]+':'+str(d[1])]=score[-1]

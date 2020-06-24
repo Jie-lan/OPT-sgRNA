@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home/lanjie/sgRNA/app/scripts")
+sys.path.append("../scripts")
 import Levenshtein
 import onehot
 import os

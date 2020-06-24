@@ -33,25 +33,25 @@ def main():
 	args.func(args)
 #rules
 rules=[]
-
+#for r in open('/home/lanjie/sgRNA/double-check/library_split/sgRNA-del/sgRNA-design/code/27260156_A375_20del_feature_lr.txt','r'):
 for r in open('./sgRNA_library/weight.txt','r'):
 	r=r.strip()
 	r=r.split('\t')
 	rules.append(r[1])	
-print('weight loading')
+#print('weight loading')
 
 def write_file(dic,path):
-	print(path)
+	#print(path)
 	fout=open(path,'w')
-	print(fout)
+	#print(fout)
 	if isinstance(dic,dict):
-		print('Yes, dic is a dictionary!')
+		#print('Yes, dic is a dictionary!')
 		for k in dic.keys():
 			for k1 in dic[k]:
 				k1=k1.split(':')
 				fout.writelines(k1[0]+k1[2]+'\t'+k1[1]+'\t'+k+'\t'+k1[3]+'-'+k1[4]+'\n')
 	else:
-		print('NO, dic is not a dictionary!')
+		#print('NO, dic is not a dictionary!')
 		gi=[]
 		for s in dic:
 			s=s.split(':')
@@ -68,14 +68,34 @@ def off_target(args):
 
 def search(args):
 	dic=a.search(args.query,args.pam)
-	print(args.out)
+	#print(args.out)
 	try:
 		write_file(dic,args.out)
 		print('\n\nSearching for sgRNAs finished.\n')
 	except:
 		print('Write failed')
 def score(args):
+	#sgrnas=a.search(args.path,args.pam)	
 	print(a.score(args.seq,rules))	
+	#Score=[]
+	#dic=[]
+	#for gi in sgrnas.keys():
+	#	for sgrna in sgrnas[gi]:
+	#		Score.append(a.score(sgrna,rules))
 	
+	#	sg2score={}
+	#	for k in Score:
+	#		k=k.split(':')
+	#		sg2score[k[0]+':'+k[1]]=k[2]
+	#	newdic=sorted(sg2score.items(),key=lambda d:d[1],reverse=True)
+		
+	
+	#	for v in newdic:
+	#		if float(v[1])>0.0:
+			
+	#			dic.append(v[0]+':'+v[1]+':'+gi)
+	
+	#	write_file(dic,args.out)
+	#print 'sgRNAs-scoring finished.\n'
 if __name__=="__main__":
 	main()
