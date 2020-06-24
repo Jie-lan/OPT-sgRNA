@@ -74,7 +74,7 @@ di=sorted(sg2off_sum.items(),key=lambda d:d[1], reverse = False)
 d2={}
 for d in di[:int(args.N)]:	
 	k=d[0].split(':')
-	score=os.popen('python /home/lanjie/sgRNA/app/scripts/sgdesign.py score --seq '+k[len(k)-1][:20]+':'+k[len(k)-3]+':'+k[len(k)-2]).read()
+	score=os.popen('python ../scripts/sgdesign.py score --seq '+k[len(k)-1][:20]+':'+k[len(k)-3]+':'+k[len(k)-2]).read()
 	score=score.strip()
 	score=score.split(':')
 	d2[d[0]+':'+str(d[1])]=score[-1]
