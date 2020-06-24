@@ -33,7 +33,7 @@ def main():
 	args.func(args)
 #rules
 rules=[]
-#for r in open('/home/lanjie/sgRNA/double-check/library_split/sgRNA-del/sgRNA-design/code/27260156_A375_20del_feature_lr.txt','r'):
+
 for r in open('./sgRNA_library/weight.txt','r'):
 	r=r.strip()
 	r=r.split('\t')
