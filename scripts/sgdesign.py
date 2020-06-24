@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home/lanjie/sgRNA/app/scripts")
+sys.path.append("./scripts")
 import argparse
 from search_sgrnas import *
 a=search()
@@ -33,8 +33,8 @@ def main():
 	args.func(args)
 #rules
 rules=[]
-#for r in open('/home/lanjie/sgRNA/double-check/library_split/sgRNA-del/sgRNA-design/code/27260156_A375_20del_feature_lr.txt','r'):
-for r in open('/home/lanjie/sgRNA/app/sgRNA_library/weight.txt','r'):
+
+for r in open('./sgRNA_library/weight.txt','r'):
 	r=r.strip()
 	r=r.split('\t')
 	rules.append(r[1])	
@@ -75,27 +75,7 @@ def search(args):
 	except:
 		print('Write failed')
 def score(args):
-	#sgrnas=a.search(args.path,args.pam)	
 	print(a.score(args.seq,rules))	
-	#Score=[]
-	#dic=[]
-	#for gi in sgrnas.keys():
-	#	for sgrna in sgrnas[gi]:
-	#		Score.append(a.score(sgrna,rules))
 	
-	#	sg2score={}
-	#	for k in Score:
-	#		k=k.split(':')
-	#		sg2score[k[0]+':'+k[1]]=k[2]
-	#	newdic=sorted(sg2score.items(),key=lambda d:d[1],reverse=True)
-		
-	
-	#	for v in newdic:
-	#		if float(v[1])>0.0:
-			
-	#			dic.append(v[0]+':'+v[1]+':'+gi)
-	
-	#	write_file(dic,args.out)
-	#print '\n\nsgRNAs-scoring finished.\n'
 if __name__=="__main__":
 	main()
