@@ -1,6 +1,6 @@
 
 import sys
-sys.path.append("/home/lanjie/sgRNA/app/scripts")
+sys.path.append("./scripts")
 from collections import Counter
 from trans_off2feature import off_score
 import random
@@ -78,13 +78,12 @@ d2={}
 for d in di[:int(args.N)]:	
 	k=d[0].split(':')
 	#print(k)
-	#score=os.popen('python sgdesign.py score --seq '+k[len(k)-1][:20]+':'+k[len(k)-3]+':'+k[len(k)-2]).read()
+	score=os.popen('python sgdesign.py score --seq '+k[len(k)-1][:20]+':'+k[len(k)-3]+':'+k[len(k)-2]).read()
 	#print(score)
-	#score=score.strip()
-	#score=score.split(':')
-	#d2[d[0]+':'+str(d[1])]=score[-1]
-	d2[d[0]+':'+str(d[1])]=random.random()
-	print(k)
+	score=score.strip()
+	score=score.split(':')
+	d2[d[0]+':'+str(d[1])]=score[-1]
+	
 print('Latest started!!!!!!!!!')
 d3=sorted(d2.items(),key=lambda d:d[1],reverse=True)
 f3.writelines('Gene\tEnsembl_gene_id\tEnsembl_exon_id\tExon_loci\tsgRNAloci(exon)\tsgRNA_strand\tsgRNA\toff-site\tActivity\n')
