@@ -32,7 +32,7 @@ Pre-constructed sgRNAs libraries for Human and Mouse should downloaded from OPT-
 <pre><code>$ sh OPT-sgRNA.sh -I input.txt -P NGG -S Human -N 100 -O 10
 </pre></code>
 
-#### input file
+#### Input file
 <pre><code>$ cat input.txt
 CD18A
 
